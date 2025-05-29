@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Summify</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/pages/auth/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <img src="/public/logo.svg" alt="Summify Logo" class="auth-logo">
+            <h1>Create Account</h1>
+            <form id="signup-form" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="auth-button">Sign Up</button>
+            </form>
+            <p class="auth-link">Already have an account? <a href="/pages/auth/signin.html">Sign In</a></p>
+        </div>
+    </div>
+    <script type="module" src="/scripts/auth/signup.js"></script>
+</body>
+</html>

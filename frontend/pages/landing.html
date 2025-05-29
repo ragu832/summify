@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Summify</title>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        .landing-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .landing-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #34495e;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .auth-button {
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .signin-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+        }
+
+        .signup-button {
+            background-color: white;
+            color: #4a90e2;
+            border: 2px solid #4a90e2;
+        }
+
+        .auth-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            color: #606f7b;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <div class="landing-content">
+            <img src="/public/logo.svg" alt="Summify Logo" class="logo">
+            <h1 class="title">Welcome to Summify</h1>
+            <p class="subtitle">Your AI-powered text summarization tool. Transform long documents into clear, concise summaries in seconds.</p>
+            
+            <div class="auth-buttons">
+                <a href="/pages/auth/signin.html" class="auth-button signin-button">Sign In</a>
+                <a href="/pages/auth/signup.html" class="auth-button signup-button">Sign Up</a>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Quick Summaries</h3>
+                    <p>Get instant summaries of articles, documents, and research papers.</p>
+                </div>
+                <div class="feature">
+                    <h3>AI-Powered</h3>
+                    <p>Advanced AI technology ensures accurate and relevant summaries.</p>
+                </div>
+                <div class="feature">
+                    <h3>Easy to Use</h3>
+                    <p>Simple interface for quick and efficient document processing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
