@@ -106,7 +106,6 @@ const upload = multer({
 });
 
 app.use(express.json());
-app.use(cors());
 
 let db;
 let client;

@@ -74,7 +74,12 @@ function handleFiles(files) {
         // Show file name in the drop zone
         const fileInfo = document.createElement('p');
         fileInfo.textContent = `Selected file: ${file.name}`;
-        dropZone.querySelector('.file-info').replaceWith(fileInfo);
+        const existingFileInfo = dropZone.querySelector('.file-info') || dropZone.querySelector('p');
+        if (existingFileInfo) {
+            existingFileInfo.replaceWith(fileInfo);
+        } else {
+            dropZone.appendChild(fileInfo);
+        }
     }
 }
 
@@ -113,7 +118,7 @@ summarizeBtn.addEventListener('click', async () => {
         let response;
         
         if (activeTab === 'text') {
-            response = await fetch('http://localhost:3000/api/summarize/text', {
+            response = await fetch('http://localhost:3001/api/summarize/text', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -133,7 +138,7 @@ summarizeBtn.addEventListener('click', async () => {
             formData.append('file', file);
             formData.append('length', summaryLength);
             
-            response = await fetch('http://localhost:3000/api/summarize/file', {
+            response = await fetch('http://localhost:3001/api/summarize/file', {
                 method: 'POST',
                 body: formData
             });
